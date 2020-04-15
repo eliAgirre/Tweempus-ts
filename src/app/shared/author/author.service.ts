@@ -5,12 +5,13 @@ import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
 import { Author } from './author.model';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class AuthorService {
 
-  private url: string = 'http://localhost:3000/authors';
-  private urlFav: string = 'http://localhost:3000/author-favorites';
+  private url: string = environment.url + 'authors';
+  private urlFavorite: string = environment.url + 'author-favorites';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,14 +23,14 @@ export class AuthorService {
         author = new Author(dbAuthor.id);
         author.fullName = dbAuthor.fullName;
         author.image = dbAuthor.image;
-        author.url = 'http://localhost:4200/author/'+dbAuthor.id;
+        author.url = 'http://localhost:4200/profile/' + dbAuthor.id;
         return author;
       }),
       catchError(this.handleError)
     );
   }
 
-  setAuthor(idAuthor: string, fullName: string, image: string): Observable<any>{
+  setAuthor(idAuthor: string, fullName: string, image: string): Observable<any> {
     let dbAuthor: any = { 'id': idAuthor, 'fullName': fullName, 'image': image };
 
     return this.httpClient.post(this.url, dbAuthor).pipe(
@@ -37,11 +38,11 @@ export class AuthorService {
     );
   }
 
-  createFavorite(idAuthor: string): Observable<any>{
-    let dbAuthor: any = { 'id': idAuthor, 'twimps': [] };
+  createFavorite(idAuthor: string): Observable<any> {
+    let dbAuthorFav: any = { 'id': idAuthor, 'twimps': [] };
 
-    return this.httpClient.post(this.urlFav, dbAuthor).pipe(
-      catchError(this.handleError)
+    return this.httpClient.post(this.urlFavorite, dbAuthorFav).pipe(
+      catchError(this.handleError)      
     );
   }
 

@@ -9,9 +9,39 @@
       "id": "2",
       "fullName": "David Teitelbaum",
       "image": "https://randomuser.me/api/portraits/men/82.jpg"
+    },
+    {
+      "id": "elisa",
+      "fullName": "elisa",
+      "image": "assets/images/logo-login.png"
     }
   ],
-  "authenticated": [],
+  "authenticated": [
+    {
+      "id": "PR31r1586967812174",
+      "author": "elisa"
+    },
+    {
+      "id": "fAvjD1586967866657",
+      "author": "elisa"
+    },
+    {
+      "id": "BIyvi1586967891395",
+      "author": "1"
+    },
+    {
+      "id": "AWcwy1586967903660",
+      "author": "1"
+    },
+    {
+      "id": "CSLMQ1586968193455",
+      "author": "elisa"
+    },
+    {
+      "id": "ewFoa1586968202638",
+      "author": "elisa"
+    }
+  ],
   "twimps": [
     {
       "id": "Mx5Cf1483389903318",
@@ -26,26 +56,45 @@
       "by": "David Teitelbaum",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur sodales libero, sit amet posuere arcu consectetur ut. Nam volutpat ligula ac nunc consectetur vestibulum.",
       "timestamp": "12-10-2016"
+    },
+    {
+      "id": "2",
+      "author": "elisa",
+      "by": "Author",
+      "content": "prueba",
+      "timestamp": "15-4-2020"
     }
   ],
   "author-favorites": [
     {
       "id": "1",
-      "twimps": ["T4qdo1483390015454"]
+      "twimps": [
+        "T4qdo1483390015454"
+      ]
     },
     {
       "id": "2",
-      "twimps": ["Mx5Cf1483389903318"]
+      "twimps": [
+        "Mx5Cf1483389903318"
+      ]
+    },
+    {
+      "id": "elisa",
+      "twimps": []
     }
   ],
   "author-twimps": [
     {
       "id": "1",
-      "twimps": ["Mx5Cf1483389903318"]
+      "twimps": [
+        "Mx5Cf1483389903318"
+      ]
     },
     {
       "id": "2",
-      "twimps": ["T4qdo1483390015454"]
+      "twimps": [
+        "T4qdo1483390015454"
+      ]
     }
   ]
 }
