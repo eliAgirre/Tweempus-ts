@@ -19,8 +19,7 @@ export class TwimpService {
     let twimps: Twimp[] = [];
 
     return this.httpClient.get(this.url).pipe(
-      map(response => {
-        let dbTwimpList: any = response;
+      map(dbTwimpList => {
         for (let i in dbTwimpList) {
           let twimp: Twimp = new Twimp(dbTwimpList[i].id, 'localhost:4200/twimp/' + dbTwimpList[i].id, new Author(dbTwimpList[i].author), dbTwimpList[i].content, dbTwimpList[i].timestamp);
           twimps.push(twimp);

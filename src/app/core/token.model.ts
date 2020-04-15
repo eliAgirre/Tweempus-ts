@@ -2,6 +2,11 @@ export class Token {
     private _key: string;
     private _idAuthor: string;
 
+    constructor(key: string, idAuthor: string) {
+        this._key = key;
+        this._idAuthor = idAuthor;
+    }
+
     get key(): string {
         return this._key;
     }
