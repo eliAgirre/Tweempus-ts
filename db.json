@@ -13,7 +13,7 @@
     {
       "id": "elisa",
       "fullName": "elisa",
-      "image": "assets/images/logo-login.png"
+      "image": "https://randomuser.me/api/portraits/women/29.jpg"
     }
   ],
   "authenticated": [
@@ -80,7 +80,9 @@
     },
     {
       "id": "elisa",
-      "twimps": []
+      "twimps": [
+        "T4qdo1483390015454"
+      ]
     }
   ],
   "author-twimps": [

@@ -8,4 +8,8 @@
        <router-outlet></router-outlet>
     </section>
 
+    <section *ngIf="checkLogin()">
+        <a class="profile_edit_icon" routerLink="/profile/{{author?.id}}/edit">&#9998;</a>
+    </section>
+
 </section>

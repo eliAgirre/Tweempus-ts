@@ -76,6 +76,26 @@ export class TwimpService {
     );
   }
 
+  getFavoritesTwimps(idAuthor: string): Observable<any> {
+    return this.httpClient.get(this.urlFavorite + '/' + idAuthor).pipe(
+      map(dbFavorites => {
+        return dbFavorites['twimps'];
+      }),
+      catchError(this.handleError)
+    );
+  }
+
+  setFavoriteTwimps(idAuthor: string, twimpList: any): Observable<any> {
+    let dbFavoriteTwimps: any = {
+      'id': idAuthor,
+      'twimps': twimpList
+    };
+
+    return this.httpClient.patch(this.urlFavorite + '/' + idAuthor, dbFavoriteTwimps).pipe(
+      catchError(this.handleError)
+    );
+  }
+
   handleError(error: any) {
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
